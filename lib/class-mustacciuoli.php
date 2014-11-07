@@ -70,7 +70,7 @@ class Mustacciuoli {
 	 * @since   1.0.0
 	 */
 	public function enqueue() {
-		wp_enqueue_script( 'hogan', plugin_dir_url( __FILE__ ) . '/inc/hogan-js/lib/hogan.js', '', $this->version, false );
+		wp_enqueue_script( 'hogan', plugin_dir_url( __FILE__ ) . 'lib/inc/hogan-js/web/builds/3.0.2/hogan-3.0.2.min.mustache.js', '', $this->version, false );
 	}
 
 	/**
@@ -94,7 +94,7 @@ class Mustacciuoli {
 				'loader'          => new Mustache_Loader_FilesystemLoader( $loader ),
 				'partials_loader' => new Mustache_Loader_FilesystemLoader( $partials_loader ),
 				'charset'         => get_bloginfo( 'charset' ),
-				'cache'           => plugin_dir_url( __FILE__ ) . '/cache/',
+				'cache'           => dirname( dirname(__FILE__) ) . 'cache',
 			) );
 
 		endif;
