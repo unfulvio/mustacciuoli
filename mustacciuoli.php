@@ -24,12 +24,13 @@ if ( ! defined( 'WPINC' ) ) die;
  * Include Mustache.php library.
  * Copyright (c) 2010-2014 Justin Hileman
  */
-require_once plugin_dir_path( __FILE__ ) . 'lib/inc/mustache-php/src/Mustache/Autoloader.php';
+require 'lib/inc/mustache-php/src/Mustache/Autoloader.php';
+Mustache_Autoloader::register();
 
 /**
  * The main class of this plugin.
  */
-require_once plugin_dir_path( __FILE__ ) . 'lib/class-mustacciuoli.php';
+require_once 'lib/class-mustacciuoli.php';
 
 /**
  * Instantiate this plugin.
