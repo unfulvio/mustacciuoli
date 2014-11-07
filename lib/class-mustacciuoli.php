@@ -70,7 +70,7 @@ class Mustacciuoli {
 	 * @since   1.0.0
 	 */
 	public function enqueue() {
-		wp_enqueue_script( 'hogan', plugin_dir_url( __FILE__ ) . 'lib/inc/hogan-js/web/builds/3.0.2/hogan-3.0.2.min.mustache.js', '', $this->version, false );
+		wp_enqueue_script( 'hogan', plugin_dir_url( __FILE__ ) . '/inc/hogan-js/web/builds/3.0.2/hogan-3.0.2.min.mustache.js', '', '3.0.2', false );
 	}
 
 	/**
