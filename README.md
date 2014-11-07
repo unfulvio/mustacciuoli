@@ -1,36 +1,37 @@
 #Mustacciuoli
 
-This is an implementation of **[PHP Console](https://github.com/barbushin/php-console)** as a [WordPress](http://www.wordpress.org) plugin.
+Brings **[Mustache](http://mustache.github.io/) template engine** to [WordPress](http://www.wordpress.org) in one of its [PHP](https://github.com/bobthecow/mustache.php) and one  [Javascript](https://github.com/twitter/hogan.js) implementations so you can use Mustache template files in your theme development and reuse the same template files across two languages. 
 
-
-> PHP Console allows you to handle PHP errors & exceptions, dump variables, execute PHP code remotely and many other things using [Google Chrome PHP Console extension](https://chrome.google.com/webstore/detail/php-console/nfhmhhlpfleoednkpnnnkolmclajemef) and [PhpConsole server library](https://github.com/barbushin/php-console).
-
-This implementation for WordPress allows you to test any WordPress specific function or class (including those introduced by your active theme and plugins!) from PHP Console terminal and inspect results, catch error and warnings with stack trace straight from Chrome Dev Tools console. 
-
+An interesting case use would be combining Mustache with [WordPress JSON API](http://wp-api.org/) to supply data to template files for example.  
 
 ## Installation
 
-Follow these steps: 
+Install the plugin as you would with any WordPress plugin in your `wp-content/plugins/` directory or equivalent.   
 
-1. First, install **[PHP Console for Google Chrome](https://chrome.google.com/webstore/detail/php-console/nfhmhhlpfleoednkpnnnkolmclajemef)**. 
+ **Note:** If you are cloning or manually downloading this git repo from GitHub, make sure to init git submodule dependencies with:
 
-2. Then, add this plugin to your WordPress installation (by placing it into your `wp-content/plugins/` directory). **Note:** If you are cloning or manually downloading this git repo from GitHub, make sure to init PHP Console git submodule (i.e. `lib\php-console` directory should not be empty - this step is not necessary if you happen to download this plugin from WordPress.org).
+    $ git submodule init
+    $ git submodule update
 
-3. Once installed, activate WP PHP Console from WordPress plugins dashboard page; then go to `PHP Console` settings page from the `Settings` menu. From here you need to enter a password for the eval terminal (required, otherwise the eval terminal simply won't work).
+This step is not necessary if you happen to download this plugin from WordPress.org.
 
-### Options
+Once installed, activate Mustacciuoli from WordPress plugins dashboard page and you're ready to go, Mustache PHP library will be instantiated already and Hogan.js script enqueued (Hogan.js is used instead of Mustache.js as the former seems to be better maintained by Twitter and faster). 
 
-In WP PHP Console settings page, you can also tick a checkbox to use the terminal only on a SSL connection (of course then if you don't have SSL the terminal simply won't work). You can also specify IP addresses to restrict the accessibility to the eval terminal (a single address eg. `192.168.0.4`; or an address mask eg. `192.168.*.*` or multiple IPs, comma separated `192.168.1.22,192.168.1.24,192.168.3.*`).   
+## Usage (PHP)
 
+To render a template file in PHP you need to follow Mustache.php instructions, for example:
 
-## Usage
+	global $mustache;
+	$template = $mustache->loadTemplate( 'your-template-file' );
+	echo $template->render( array( 'your-vars') );
 
-Once you have set up a password, you can navigate any of your WordPress page (including WordPress admin) and try the console. You will se a "key" icon in your browser address bar. By clicking on it, it will prompt for the password you have set just before. After entering the correct password, you can use the eval terminal and run any PHP code from it, including WordPress own functions. Furthermore, in Chrome Dev Tools console you will also see printed any PHP errors, warnings, notices with stack trace, which will be useful to debug your plugin or theme.  
+Global variable `$mustache` holds the template engine instance, so you can reuse it in your template files without instantiating it again and again.
 
-### Caveats
+By default, Mustacciuoli will tell Mustache.php to look for template files in `/templates/views` directory of your active theme. Partials will be in `/templates/views/partials`. However, you can override these settings by hooking these two filters and providing a different path, like so:
 
-You should not use this plugin or PHP Console library in a production environment, rather a development/testing environment. You will otherwise add more load to your server and even put your site at risk since you're exposing PHP code publicly.
+	add_filter( 'mustache_templates_path', function() { return 'your-path'; } );
+	add_filter( 'mustache_partials_path', function() { return 'your-path/partials'; } );
 
-### Browser support
+## Usage (Javascript)
 
-Currently PHP Console only supports Google Chrome browser. If you're using for example Firefox or Opera this plugin won't be of much use to you at the moment.
+Follow [Hogan.js documentation](http://twitter.github.io/hogan.js/).  
