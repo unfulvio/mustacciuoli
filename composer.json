@@ -1,0 +1,12 @@
+{
+	"name": "nekojira/mustacciuoli",
+	"description": "Add support to Mustache template engine in WordPress. Includes implementations of Mustache in both PHP and Javascript.",
+	"version": "1.0.0",
+	"type": "wordpress-plugin",
+	"keywords": [
+		"wordpress",
+		"mustache"
+	],
+	"homepage": "https://github.com/nekojira/mustacciuoli",
+	"license": "GPLv2 or later"
+}

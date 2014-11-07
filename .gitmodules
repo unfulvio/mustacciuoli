@@ -1,0 +1,6 @@
+[submodule "lib/inc/mustache-php"]
+	path = lib/inc/mustache-php
+	url = git://github.com/bobthecow/mustache.php
+[submodule "lib/inc/hogan-js"]
+	path = lib/inc/hogan-js
+	url = git://github.com/twitter/hogan.js
