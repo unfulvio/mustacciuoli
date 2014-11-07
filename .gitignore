@@ -1,8 +1,5 @@
 ### Mustacciuoli .gitignore file
 
-cache/.
-cache/*.*
-
 ## OS crap
 .DS_Store
 .DS_Store?

@@ -34,4 +34,4 @@ require_once plugin_dir_path( __FILE__ ) . 'lib/class-mustacciuoli.php';
 /**
  * Instantiate this plugin.
  */
-$WP_PHP_Console = new Mustacciuoli();
+$Mustacciuoli = new Mustacciuoli();
