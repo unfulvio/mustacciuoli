@@ -24,8 +24,10 @@ if ( ! defined( 'WPINC' ) ) die;
  * Include Mustache.php library.
  * Copyright (c) 2010-2014 Justin Hileman
  */
-require 'lib/inc/mustache-php/src/Mustache/Autoloader.php';
-Mustache_Autoloader::register();
+if ( ! class_exists( 'Mustache_Engine' ) ) {
+	require 'lib/inc/mustache-php/src/Mustache/Autoloader.php';
+	Mustache_Autoloader::register();
+}
 
 /**
  * The main class of this plugin.
