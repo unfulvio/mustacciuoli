@@ -8,8 +8,8 @@
  * @wordpress-plugin
  * Plugin Name:       Mustacciuoli
  * Plugin URI:        https://github.com/nekojira/mustacciuoli/
- * Description:       Add support to Mustache template engine in WordPress. Includes implementations of Mustache in both PHP and Javascript.
- * Version:           1.0.0
+ * Description:       Add support to Mustache template engine in WordPress. Includes implementations of Mustache for both PHP and Javascript.
+ * Version:           1.1.0
  * Author:            nekojira
  * Author URI:        https://github.com/nekojira/
  * License:           GPL-2.0+
@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * Copyright (c) 2010-2014 Justin Hileman
  */
 if ( ! class_exists( 'Mustache_Engine' ) ) {
-	require 'lib/inc/mustache-php/src/Mustache/Autoloader.php';
+	require 'vendor/autoload.php';
 	Mustache_Autoloader::register();
 }
 
@@ -37,4 +37,4 @@ require_once 'lib/class-mustacciuoli.php';
 /**
  * Instantiate this plugin.
  */
-$Mustacciuoli = new Mustacciuoli();
+$mustacciuoli = new Mustacciuoli();

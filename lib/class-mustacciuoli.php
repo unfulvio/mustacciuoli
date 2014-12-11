@@ -44,7 +44,7 @@ class Mustacciuoli {
 	public function __construct() {
 
 		$this->plugin_name = 'mustacciuoli';
-		$this->version = '1.0.0';
+		$this->version = '1.1.0';
 
 		add_action( 'plugins_loaded',   array( $this, 'set_locale' ) );
 		add_action( 'wp_enqueue_scripts',  array( $this, 'enqueue' ) );
@@ -64,12 +64,13 @@ class Mustacciuoli {
 	}
 
 	/**
-	 * Enqueue javascript.
+	 * Enqueue scripts.
+	 * Will enqueue an implementation of mustache.js minified.
 	 *
 	 * @since   1.0.0
 	 */
 	public function enqueue() {
-		wp_enqueue_script( 'hogan', plugin_dir_url( __FILE__ ) . '/inc/hogan-js/web/builds/3.0.2/hogan-3.0.2.min.mustache.js', '', '3.0.2', false );
+		wp_enqueue_script( 'mustacciuoli', plugin_basename( __FILE__ ) . '/assets/scripts/mustacciuoli.min.js', array( 'jquery' ), $this->version, false );
 	}
 
 }

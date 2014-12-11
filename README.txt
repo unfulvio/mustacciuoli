@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: mustache, theme-development, templates, template-engine
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,15 +16,14 @@ Brings Mustache template engine to WordPress in one of its PHP and one of its Ja
 
 An interesting case use would be combining Mustache with WordPress JSON API to supply data to template files for example.
 
-Please refer to https://github.com/nekojira/mustacciuoli for instructions on how to load and render Mustache templates in PHP with this plugin. As for the JS part, refer to Hogan.js documentation at http://twitter.github.io/hogan.js/
 
 == Installation ==
 
 Install the plugin as you would with any WordPress plugin in your `wp-content/plugins/` directory or equivalent.
 
-Once installed, activate Mustacciuoli from WordPress plugins dashboard page and you're ready to go, Mustache PHP library will be instantiated already and Hogan.js script enqueued (Hogan.js is used instead of Mustache.js as the former seems to be better maintained by Twitter and faster).
+Once installed, activate Mustacciuoli from WordPress plugins dashboard page and you're ready to go, Mustache PHP library will be instantiated already and mustache.js script enqueued.
 
-If you don't want to use the supplied Javascript library, you can de-queue Hogan.js with `dequeue_script('hogan')` from your theme functions.php.
+If you don't want to use the supplied Javascript library, you can de-queue it using with `dequeue_script('mustacciuoli')` from your theme functions.php.
 
 == Frequently Asked Questions ==
 
@@ -38,10 +37,17 @@ Not much to show, this plugin has no UI.
 
 == Changelog ==
 
+= 1.1.0 =
+* Replaced Hogan.js with mustache.js
+* Updated dependencies
+
 = 1.0.0 =
 * First public release.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Hogan.js was dropped in favor of mustache.js
 
 = 1.0.0 =
 First public release.
