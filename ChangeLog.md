@@ -1,3 +1,6 @@
+### 1.1.1 (11 dec 2014)
+* Fixed enqueue scripts bug
+
 ### 1.1.0 (11 dec 2014)
 * Replaced Hogan.js with mustache.js
 * Updated dependencies (and got rid of git submodules)

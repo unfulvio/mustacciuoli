@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: mustache, theme-development, templates, template-engine
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ No, it is not.
 Not much to show, this plugin has no UI.
 
 == Changelog ==
+
+= 1.1.1 =
+* Bugfixes
 
 = 1.1.0 =
 * Replaced Hogan.js with mustache.js

@@ -44,7 +44,7 @@ class Mustacciuoli {
 	public function __construct() {
 
 		$this->plugin_name = 'mustacciuoli';
-		$this->version = '1.1.0';
+		$this->version = '1.1.1';
 
 		add_action( 'plugins_loaded',   array( $this, 'set_locale' ) );
 		add_action( 'wp_enqueue_scripts',  array( $this, 'enqueue' ) );
@@ -70,7 +70,7 @@ class Mustacciuoli {
 	 * @since   1.0.0
 	 */
 	public function enqueue() {
-		wp_enqueue_script( 'mustacciuoli', plugin_basename( __FILE__ ) . '/assets/scripts/mustacciuoli.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( 'mustacciuoli', plugins_url( $this->plugin_name ) . '/assets/scripts/mustacciuoli.min.js', array( 'jquery' ), $this->version, false );
 	}
 
 }
