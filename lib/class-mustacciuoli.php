@@ -44,7 +44,7 @@ class Mustacciuoli {
 	public function __construct() {
 
 		$this->plugin_name = 'mustacciuoli';
-		$this->version = '1.1.1';
+		$this->version = '1.1.2';
 
 		add_action( 'plugins_loaded',   array( $this, 'set_locale' ) );
 		add_action( 'wp_enqueue_scripts',  array( $this, 'enqueue' ) );

@@ -9,7 +9,7 @@
  * Plugin Name:       Mustacciuoli
  * Plugin URI:        https://github.com/nekojira/mustacciuoli/
  * Description:       Add support to Mustache template engine in WordPress. Includes implementations of Mustache for both PHP and Javascript.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            nekojira
  * Author URI:        https://github.com/nekojira/
  * License:           GPL-2.0+

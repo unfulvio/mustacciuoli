@@ -12,9 +12,11 @@ Add support to Mustache template engine in WordPress. Includes implementations o
 
 == Description ==
 
-Brings Mustache template engine to WordPress in one of its PHP and one of its Javascript implementations so you can use Mustache template files in your theme development and reuse the same template files across two languages.
+Brings Mustache template engine to WordPress in one of its PHP https://github.com/bobthecow/mustache.php and one of its Javascript https://github.com/janl/mustache.js implementations so you can use Mustache template files in your theme development and reuse the same template files across two languages.
 
-An interesting case use would be combining Mustache with WordPress JSON API to supply data to template files for example.
+Unlike other frameworks, WordPress lacks of a template engine for its themes, relying on a well-established PHP template hierarchy. A template engine could prove useful to separate logic (code) from content (text) and presentation (html), resulting in more clarity, better code readability and maintenance, and even ability to share template files across different frameworks, languages or systems.
+
+For example, an interesting case use would be combining Mustache with WordPress JSON API http://wp-api.org/ to supply data to template files.
 
 
 == Installation ==
@@ -25,17 +27,33 @@ Once installed, activate Mustacciuoli from WordPress plugins dashboard page and 
 
 If you don't want to use the supplied Javascript library, you can de-queue it using with `dequeue_script('mustacciuoli')` from your theme functions.php.
 
+You need to refer to https://github.com/bobthecow/mustache.php/wiki for instructions on how instantiate and setup Mustache in your theme, once this plugin is activated.
+For the Javascript version, follow instructions here https://github.com/janl/mustache.js.
+
 == Frequently Asked Questions ==
 
 = Is this a WordPress official plugin for Mustache? =
 
-No, it is not.
+No, it is not really.
+
+= How do I write a Mustache template? =
+
+The engine language is very simple, you can find everything you need here: http://mustache.github.io/mustache.5.html
+You can name your template files .mst or .mustache, but it doesn't really matter as long as they are text files html/html5 compliant.
+
+= What the heck does it mean 'Mustacciuoli'? =
+
+'Mustache' as a plugin name was taken; besides it felt inappropriate calling this plugin as the template engine itself, as it just implements third party libraries in WordPress. Mustacciuoli sounds like "mustache" in English, but are actually a type of Christmas cookies from Napoli http://en.wikipedia.org/wiki/Mustacciuoli - you should try them!
 
 == Screenshots ==
 
-Not much to show, this plugin has no UI.
+Not much to show, this plugin has no real UI.
+Read the Mustache manual instead: http://mustache.github.io/mustache.5.html
 
 == Changelog ==
+
+= 1.1.2 =
+* Release on wordpress.org plugins repo
 
 = 1.1.1 =
 * Bugfixes
