@@ -1,5 +1,7 @@
 #Mustacciuoli
 
+[![Join the chat at https://gitter.im/nekojira/mustacciuoli](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nekojira/mustacciuoli?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Adds **[Mustache](http://mustache.github.io/) template engine** support to [WordPress](http://www.wordpress.org) in one of its [PHP](https://github.com/bobthecow/mustache.php) and one of its [Javascript](https://github.com/janl/mustache.js) implementations so you can use Mustache template files in your theme development and reuse the same template files across two languages.
 
 An interesting case use would be combining Mustache with [WordPress JSON API](http://wp-api.org/) to supply data to template files for example.  
