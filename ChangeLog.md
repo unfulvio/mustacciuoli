@@ -1,3 +1,6 @@
+### 1.1.3 (30 apr 2015)
+* Supports WordPress 4.2
+
 ### 1.1.2 (15 jan 2015)
 * Submission to WordPress.org plugins repo
 

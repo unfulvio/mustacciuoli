@@ -2,9 +2,9 @@
 Contributors: nekojira
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GSTFUY3LMCA5W
 Tags: mustache, theme-development, templates, template-engine
-Requires at least: 3.0.1
-Tested up to: 4.0
-Stable tag: 1.1.1
+Requires at least: 3.6.0
+Tested up to: 4.2.1
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,9 @@ Not much to show, this plugin has no real UI.
 Read the Mustache manual instead: http://mustache.github.io/mustache.5.html
 
 == Changelog ==
+
+= 1.1.3 =
+* Supports WordPress 4.2
 
 = 1.1.2 =
 * Release on wordpress.org plugins repo
