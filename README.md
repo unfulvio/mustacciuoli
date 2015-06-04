@@ -1,10 +1,11 @@
 #Mustacciuoli
 
+[![GitHub version](https://badge.fury.io/gh/nekojira%2Fmustacciuoli.svg)](http://badge.fury.io/gh/nekojira%2Fmustacciuoli)
 [![Join the chat at https://gitter.im/nekojira/mustacciuoli](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nekojira/mustacciuoli?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Adds **[Mustache](http://mustache.github.io/) template engine** support to [WordPress](http://www.wordpress.org) in one of its [PHP](https://github.com/bobthecow/mustache.php) and one of its [Javascript](https://github.com/janl/mustache.js) implementations so you can use Mustache template files in your theme development and reuse the same template files across two languages.
+Adds **[Mustache](http://mustache.github.io/) template engine** support to [WordPress](http://www.wordpress.org) with one of its [PHP](https://github.com/bobthecow/mustache.php) and one of its [Javascript](https://github.com/janl/mustache.js) implementations so you can use Mustache template files in your theme development and reuse the same template files across two languages.
 
-An interesting case use would be combining Mustache with [WordPress JSON API](http://wp-api.org/) to supply data to template files for example.  
+An interesting case use would be combining Mustache with [WordPress JSON REST API](http://wp-api.org/) to supply JSON data to your Mustache template files, for example.  
 
 
 ## Installation
@@ -46,6 +47,8 @@ Don't need the JS support? If you want to disable mustache.js, you can de-queue 
 	add_action( 'wp_print_scripts', 'dequeue_mustacciuoli', 100 );
 
 	
-## Unavailability on wordpress.org
+## FAQ
 
-This plugin is currently not available on [WordPress.org Plugin's directory](https://wordpress.org/plugins/) because frameworks, boilerplates, and libraries such as those included in this plugin are deemed not a good fit for the official repository for the time being. Therefore, please refer to this repo on Github for updates/support, etc. Thank you.
+##### Why this is not available on WordPress.org?
+
+WordPress lacks of a template engine and for theming and templating encourages mixing PHP and HTML, adding function and logic to presentation, often resulting in a spaghetti mess. This has been very controversial. At the same time different developers came with different solutions to the problem, usually fit to their personal or team workflow - which is all reasonable. Mustacciuoli is in no way different. However, the guys at the official [WordPress.org Plugin's directory](https://wordpress.org/plugins/) realized that all this may confuse users and have made a rule to exclude frameworks, boilerplates, and developer libraries such as those included in this plugin from the official repository for the time being. Therefore, please refer to this repo on Github for updates/contributions/support, thank you.
