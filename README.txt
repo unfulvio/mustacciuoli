@@ -1,7 +1,7 @@
 === Mustacciuoli ===
 Contributors: nekojira
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GSTFUY3LMCA5W
-Tags: mustache, theme-development, templates, template-engine
+Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P64V9NTEYFKDL
+Tags: mustache, handlebars, theme-development, templates, template-engine
 Requires at least: 3.6.0
 Tested up to: 4.2.1
 Stable tag: 1.1.3
